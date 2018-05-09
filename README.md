@@ -6,7 +6,7 @@ This fork has overwritten the original am/pm clock, therefore all settings/param
 ### What this fork provides
   * A 24 hour version of Amazing Time picker
 
-To use/install this: 
+###To use/install this: 
   1. download from git
   2. forget npm
   3. copy the atp-library folder into your project 
@@ -14,7 +14,7 @@ To use/install this:
 
 
 
-![24h Time Picker](time-picker24h.png)
+![24h Time Picker](time-picker24h.png =250)
 
 
 # Amazing Time Picker (Clock) ![Build Status](https://travis-ci.org/owsolutions/amazing-time-picker.svg?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
