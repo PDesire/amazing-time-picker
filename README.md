@@ -1,9 +1,20 @@
-# casni14 - 24h Clock EDIT
-Disclaimer! This is a patchy fork from https://github.com/owsolutions/amazing-time-picker, do not expect that every setting work as described in the original online demo (https://owsolutions.github.io/amazing-time-picker/)
+# Casni14 - 24h Clock EDIT
+Disclaimer! This is a fork from https://github.com/owsolutions/amazing-time-picker, do not expect that every setting work as described in the original online demo (https://owsolutions.github.io/amazing-time-picker/)
+I haven't tested all preferences thoroughly, but it works (as far as i can see) with most of the settings/parameters.
+This fork has overwritten the original am/pm clock, therefore all settings/parameters including am or pm will not have any effect (or maybe break 😅) 
 
 ### What this fork provides
   * A 24 hour version of Amazing Time picker
-  
+
+To use/install this: 
+  1. download from git
+  2. forget npm
+  3. copy the atp-library folder into your project 
+  4. follow the install guide below and remember to change the import path to your copied folder in AppModule as well as in the components using the AmazingTimePickerService
+
+
+
+![24h Time Picker](time-picker24h.png)
 
 
 # Amazing Time Picker (Clock) ![Build Status](https://travis-ci.org/owsolutions/amazing-time-picker.svg?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
