@@ -1,3 +1,11 @@
+# casni14 - 24h Clock EDIT
+Disclaimer! This is a patchy fork from https://github.com/owsolutions/amazing-time-picker, do not expect that every setting work as described in the original online demo (https://owsolutions.github.io/amazing-time-picker/)
+
+### What this fork provides
+  * A 24 hour version of Amazing Time picker
+  
+
+
 # Amazing Time Picker (Clock) ![Build Status](https://travis-ci.org/owsolutions/amazing-time-picker.svg?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 A visual time picker for angular 2+ projects. You can use this timepicker with Angular 2, 4, 5 and Angular Material. **This project doesn't require angular material or any other dependencies**

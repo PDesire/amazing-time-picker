@@ -26,6 +26,7 @@ export interface RangeTime {
 export interface Pallete {
   background?: string;
   color?: string;
+  height?: string;
 }
 
 export interface IDialogResult {

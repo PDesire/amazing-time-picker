@@ -20,7 +20,7 @@ export class TimePickerComponent implements OnInit {
   public time: ITime = {
     ampm: 'AM',
     minute: 0,
-    hour: 12
+    hour: 24
   };
   public nowTime: any = this.time.hour;
   public degree: any;
@@ -37,6 +37,8 @@ export class TimePickerComponent implements OnInit {
 
   public ParseStringToTime (time: string): void {
     time = (time === '' || time === undefined || time === null) ? this.time.hour + ':' + this.time.minute : time;
+
+    
     this.time = this.core.StringToTime(time);
   }
 
@@ -91,13 +93,22 @@ export class TimePickerComponent implements OnInit {
         width: ele.currentTarget.offsetWidth,
         height: ele.currentTarget.offsetHeight
       };
-      const degrees = this.core.CalcDegrees(ele, parrentPos, step);
+      let degrees = this.core.CalcDegrees(ele, parrentPos, step);
+      const radius = this.core.calcRadius(ele, parrentPos, step)
       let hour = this.time.hour,
           minute = this.time.minute;
 
       if (this.clockType === 'hour') {
-        hour = (degrees / step);
-        hour = (hour > 12) ? hour - 12 : hour;
+        if(radius > 83){
+          hour = (degrees / step);
+          hour = (hour > 12) ? hour - 12 : hour; 
+        } else {
+          if(degrees >= 270 && degrees <=360){
+            degrees += 360
+          }
+          hour = (degrees / step) 
+          hour = (hour > 23 ? hour - 24 : hour)
+        }
       } else if (this.clockType === 'minute') {
         minute = (degrees / step);
         minute = (minute > 59) ? minute - 60 : minute;
@@ -106,12 +117,13 @@ export class TimePickerComponent implements OnInit {
       const min = this.config.rangeTime.start,
             max = this.config.rangeTime.end;
 
-      const nowMinHour = +min.split(':')[0] < 12 ? +min.split(':')[0] : +min.split(':')[0] - 12;
-      const nowMaxHour = +max.split(':')[0] < 12 ? +max.split(':')[0] : +max.split(':')[0] - 12;
+      const nowMinHour =  +min.split(':')[0];
+      const nowMaxHour =  +max.split(':')[0];
       const nowMinMin = +min.split(':')[1];
       const nowMaxMin = +max.split(':')[1];
 
       const nowTime = this.GetNowTime(hour, this.time.ampm, minute);
+      
       if (this.allowed.indexOf(nowTime) > -1) {
         this.time.hour = hour;
         this.time.minute = minute;
@@ -128,8 +140,9 @@ export class TimePickerComponent implements OnInit {
   }
 
   private GetNowTime (hour: number, ampm: 'AM' | 'PM', minute: number): string {
-    const Hour = (hour === 12 && ampm === 'AM') ? '0' : hour;
-    const nowTime = Hour + ':' + minute + ' ' + ampm;
+    
+    const Hour = (hour === 24) ? '0' : hour;
+    const nowTime = Hour + ':' + minute;
     return nowTime;
   }
 
@@ -238,7 +251,7 @@ export class TimePickerComponent implements OnInit {
     if (this.preference && this.preference.hour) {
       return this.preference.hour(this.time.hour);
     }
-    return this.time.hour;
+    return (this.time.hour < 10) ? "0" + this.time.hour : this.time.hour;
   }
   public GetClockTime(clock: IClockNumber) {
     if ( ! this.preference) {
