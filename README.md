@@ -14,7 +14,7 @@ This fork has overwritten the original am/pm clock, therefore all settings/param
 
 
 
-![24h Time Picker](time-picker24h.png | width=250)
+![24h Time Picker](time-picker24h.png)
 
 # Amazing Time Picker (Clock) ![Build Status](https://travis-ci.org/owsolutions/amazing-time-picker.svg?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
