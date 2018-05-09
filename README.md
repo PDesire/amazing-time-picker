@@ -12,7 +12,7 @@ This fork has overwritten the original am/pm clock, therefore all settings/param
   3. copy the atp-library folder into your project 
   4. follow the install guide below and remember to change the import path to your copied folder in AppModule as well as in the components using the AmazingTimePickerService
 
-<img src="time-picker24h.png" alt="24h Time Picker Screen Shot" style="width: 20%">
+<img src="time-picker24h.png" alt="24h Time Picker Screen Shot" style="width: 10%">
 
 # Amazing Time Picker (Clock) ![Build Status](https://travis-ci.org/owsolutions/amazing-time-picker.svg?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
