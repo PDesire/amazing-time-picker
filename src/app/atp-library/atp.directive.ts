@@ -1,6 +1,6 @@
 import { Directive, ViewContainerRef, Output, EventEmitter, HostListener, ElementRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { AmazingTimePickerService } from './atp-time-picker.service';
+import { AmazingTimePickerServiceTwentyfour } from './atp-time-picker.service';
 
 @Directive({
   selector: 'input[atp-time-picker]',
@@ -18,7 +18,7 @@ export class AtpDirective implements ControlValueAccessor {
   private onChange = (x: any): void => {};
   constructor(
       public viewContainerRef: ViewContainerRef,
-      private atp: AmazingTimePickerService) {
+      private atp: AmazingTimePickerServiceTwentyfour) {
     this.elementRef = this.viewContainerRef.element;
   }
 

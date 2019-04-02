@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AmazingTimePickerService } from '../../../atp-library/atp-time-picker.service';
+import { AmazingTimePickerServiceTwentyfour } from '../../../atp-library/atp-time-picker.service';
 
 const encode = (x) => x.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
   return '&#' + i.charCodeAt(0) + ';';
@@ -15,7 +15,7 @@ export class ExampleArabicComponent implements OnInit {
   public sintax = '{{selectedTime}}';
 
   constructor(
-    private atp: AmazingTimePickerService,
+    private atp: AmazingTimePickerServiceTwentyfour,
   ) { }
 
   ngOnInit() {

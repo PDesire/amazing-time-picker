@@ -6,7 +6,7 @@ import { Subject } from 'rxjs/Subject';
 import { Preference } from './preferences';
 
 @Injectable()
-export class AmazingTimePickerService {
+export class AmazingTimePickerServiceTwentyfour {
 
   constructor (
     private resolver: ComponentFactoryResolver,

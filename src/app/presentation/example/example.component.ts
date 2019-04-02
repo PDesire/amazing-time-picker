@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AmazingTimePickerService } from '../../atp-library/atp-time-picker.service';
+import { AmazingTimePickerServiceTwentyfour } from '../../atp-library/atp-time-picker.service';
 
 @Component({
   selector: 'app-example',
@@ -11,7 +11,7 @@ export class ExampleComponent {
   public selectedTimeDark = '18:33';
   public sintax = '{{selectedTime}}';
 
-  constructor(private atp: AmazingTimePickerService) { }
+  constructor(private atp: AmazingTimePickerServiceTwentyfour) { }
 
   open() {
     const amazingTimePicker = this.atp.open();

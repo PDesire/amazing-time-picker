@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TimePickerComponent } from './time-picker/time-picker.component';
 import { AtpTimePickerComponent } from './atp-time-picker/atp-time-picker.component';
-import { AmazingTimePickerService } from './atp-time-picker.service';
+import { AmazingTimePickerServiceTwentyfour } from './atp-time-picker.service';
 import { AtpDirective } from './atp.directive';
 import { AtpCoreService } from './atp-core.service';
 
@@ -16,7 +16,7 @@ import { AtpCoreService } from './atp-core.service';
     AtpDirective
   ],
   providers: [
-    AmazingTimePickerService,
+    AmazingTimePickerServiceTwentyfour,
     AtpCoreService
   ],
   entryComponents: [TimePickerComponent],
@@ -26,4 +26,4 @@ import { AtpCoreService } from './atp-core.service';
     AtpDirective
   ]
 })
-export class AmazingTimePickerModule { }
+export class AmazingTimePickerModuleTwentyfour { }

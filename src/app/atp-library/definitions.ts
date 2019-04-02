@@ -2,7 +2,7 @@ import { Observable } from 'rxjs/Rx';
 
 /**
  * AmazingTimePicker configuration
- * when calling open() function from 'AmazingTimePickerService' passed as parameter
+ * when calling open() function from 'AmazingTimePickerServiceTwentyfour' passed as parameter
  */
 export interface TimePickerConfig {
   time?: string;
